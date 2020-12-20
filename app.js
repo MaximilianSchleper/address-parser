@@ -1,7 +1,7 @@
 const fs = require('fs');
 const csv = require('csv-parser');
 
-fs.createReadStream('addresses_no_duplicates.csv')
+fs.createReadStream('addresses.csv')
   .pipe(csv())
   .on('data', (row) => {
     whole_street = row.wholestreet;
